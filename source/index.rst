@@ -13,7 +13,15 @@ documentation for details.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
-   
-      navigation
+   :numbered:
+
+   navigation
+   users
+   requisitioners
+   accessioners
+   laboratory
+   signout
+   study-admins
+   global-users
+
 

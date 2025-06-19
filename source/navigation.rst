@@ -1,5 +1,5 @@
 ################################################
-Navigating the OICR Genomics Requisition System
+Navigation
 ################################################
 
 All users begin their session at OICR Genomics Requisition System landing page.  Permissions for each study are granted by the Administrator. Clinical Program managers may be granted access to more than one study as required to monitor their team’s respective activities.  
@@ -67,12 +67,16 @@ Requisition Case History
 
 The case history contains a date and time stamped audit log of all requisition status changes as performed by all users. All requisition status changes, Accessioner submission denials and rejected draft genomic report notes may be reviewed from the “Case History” tab
 
-# Select a requisition ID from the study dashboard as seen below.  
-# Select the “Case History” tab, as seen below. 
+#. Select a requisition ID from the study dashboard as seen below.  
+#. Select the “Case History” tab, as seen below. 
 
 
 Manage Forms
 =============
 
 The “Manage Forms” dashboard contains form management configuration options and is available to Administrators of specific forms as well as global Form Administrators. 
+
+
+.. toctree::
+   :maxdepth: 2
 
