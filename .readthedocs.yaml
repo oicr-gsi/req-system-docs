@@ -11,5 +11,5 @@ build:
 #    - method: pip
 #      path: . 
 sphinx:
-  configuration: docs/source/conf.py
+  configuration: source/conf.py
   fail_on_warning: true
