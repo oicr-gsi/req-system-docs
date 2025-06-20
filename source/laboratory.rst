@@ -4,6 +4,8 @@ Laboratory Users
 
 This role includes both TGL staff as well as the Cancer Genomics Interpreter (CGI) team. CGI prepares draft clinical and QC reports and uploads PDF documents for review by Sign Out users. This team aggregates pipeline outputs to create a draft genomic report.  This protocol is limited to uploading the draft clinical and QC report to a respective requisition via the OICR Genomics Requisition System for review by licensed Geneticists only. 
 
+.. _upload-draft:
+
 Uploading a Draft Clinical Report
 =====================================
 
@@ -48,7 +50,7 @@ Reviewing a Requisitioner-Edited Submission (Laboratory-CGI)
 #. Navigate to the Submissions tab and select the study specific requisition ID that was edited by the Requisitioner as noted in the notification email
 #. If the requisition status is “Submitted”, the Accessioner has not approved the changes to the requisition and updates to MISO LIMS records have not occurred. The requisition may not be visible to Laboratory users. Wait until status is “Submission approved” before proceeding. 
 #. If the requisition status is “Submission approved”, CGI must review the changes to the requisition for non-PHI field changes that are not captured within MISO LIMS that may alter the draft genomic report and/or QC report. Verify requisition date and time stamps to ensure you are reviewing the updated requisition.
-#. If necessary, revise the draft genomic and QC report with changed information following procedures as outlined in Uploading a Draft Clinical Report (Laboratory). 
+#. If necessary, revise the draft genomic and QC report with changed information following procedures as outlined in :ref:`upload-draft`. 
 
 
 Consent Withdrawal 

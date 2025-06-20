@@ -4,6 +4,8 @@ Sign Out Users
 
 Licensed Geneticists (CCMG/ACMG) must review and approve draft genomic reports prior to inclusion of PHI and release of the clinical report to requisitioners for inclusion in patient medical records.
 
+.. _review-draft:
+
 Reviewing and Accepting/Rejecting a Draft Clinical Report
 ==========================================================
 
@@ -29,7 +31,7 @@ Non-PHI change requests
 
 If the correction involves non-PHI, both PHI and non-PHI, or if the report has not yet been signed out, the report will be rescinded and sent back to the Accessioner for review. After Accessioner and Laboratory review and revision of the draft report, an email notification will be sent to the Sign Out user with the subject “A draft clinical report is ready for review” and the requisition will change to status “Draft Report Ready for Review”.  A revised (if necessary) draft genomic and QC report will be available for review.  Note, previous draft genomic and QC reports are available for review in the requisition case history.
 
-Follow instructions in Reviewing and Accepting/Rejecting a Draft Clinical Report (Sign Out).  Prior requisition versions may be reviewed in requisition case history.
+Follow instructions in :ref:`review-draft`.  Prior requisition versions may be reviewed in requisition case history.
 
 PHI Change Requests
 -------------------
@@ -38,9 +40,13 @@ If a change is made to a requisition that impacts PHI only, the status of a subm
 
 From within the requisition, scroll to the Sign Out Rescind- [Non-PHI] section header at the bottom of the requisition and review the Requisitioner’s comment field.
 
+.. image:: images/signout-phi-change-1.png
 
 #. Navigate to the case history and review corrected requisition PHI information (in the example above, treating physician field). 
 #. From the case history (shown) or from the main dashboard, select “Edit Submission”.
+
+.. image:: images/signout-phi-change-2.png
+
 
 To accept the changes:
 

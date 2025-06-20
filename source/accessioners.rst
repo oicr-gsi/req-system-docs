@@ -4,6 +4,8 @@ Accessioners
 
 After a Requisitioner submits a new requisition, or after they have edited a requisition, the requisition must be approved by an OICR Accessioner.  An OICR Accessioner may be responsible for approving requisitions from several study specific requisitions and requisition user accounts.  OICR Accessioners are assigned to each study specific requisition and multiple Accessioners may be responsible for one or more studies.  If you are designated an Accessioner, you will receive an email notification of a new requisition with ID and instructions indicating next actions that are required upon logging into the OICR Genomics Requisition System.  Please note, samples should not ship prior to acceptance of a requisition.
 
+.. _approve-submission:
+
 Approving a Submission
 ======================
 
@@ -26,10 +28,10 @@ If materials have been received at OICR, the following procedure must be followe
 
 The status of the submission will be “Submitted”. 
 
-#. Within the requisition, select the case history as seen below. 
+#. Within the requisition, select the case history. 
 #. Review changes to the requisition by comparing requisition fields between the original submission and the revised submission and/or case history comment fields. Both the original and the revised requisition are available in the case history.
-#. Verify requisition date and time stamps to ensure you are reviewing the edited requisition as seen below.
-#. If non-PHI field changes are acceptable, approve the requisition as documented in Approving a Submission (Accessioner).  Note, changes may have occurred within PHI fields that are not visible to the Accessioner (your) role. 
+#. Verify requisition date and time stamps to ensure you are reviewing the edited requisition.
+#. If non-PHI field changes are acceptable, approve the requisition as documented in :ref:`approve-submission`.  Note, changes may have occurred within PHI fields that are not visible to the Accessioner (your) role. 
 #. The Accessioner will receive an email notification with the subject header “Anticipate Sample Shipment to Tissue Portal”.  This notification may be disregarded.
 #. If materials were previously received at OICR and accessioned into MISO LIMS but have not yet been transferred outside of OICR Tissue Portal, make required changes to LIMS identities and/or material labels. 
 #. If materials (nucleic acid aliquots) have been transferred to the Translational Genomics Laboratory (TGL), and changes are required to LIMS identities, notify TGL staff. They will update their LIMS entries and/or update material labels. 

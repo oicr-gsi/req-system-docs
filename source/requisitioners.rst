@@ -15,7 +15,7 @@ Be prepared and have all required information available for entry. More details 
 #. To submit a study specific requisition, login to OICR Genomics Requisition System.  
 #. In the upper right-hand corner of the dashboard landing page, select “View Forms”. 
 #. Select the study specific requisition tile e.g. “Req Form-Pilot Verification (01)”. If the requisition form is “greyed out” and you cannot enter information, you do not have permission to access that particular requisition form; contact the Administrator. 
-#. Complete the requisition form with information about the case. See  Information Collected for All Study Requisitions for more information. Certain fields, including your account information may be autocompleted.
+#. Complete the requisition form with information about the case. See :ref:`information-collected` for more information. Certain fields, including your account information may be autocompleted.
 #. A notification email will be sent to confirm your submission with the subject header “Your requisition was received. Accessioner approval pending”.
 #. Before shipping any materials, your requisition must be approved/accepted by OICR.  Do not ship samples until your submission is approved. 
 #. You may review your submission at any time by navigating to your account dashboard and selecting the “Submissions” tab and study specific form, where you can track requisition status.
@@ -41,7 +41,7 @@ If you have erroneously entered information on a requisition, editing a requisit
 #. From the action menu, select “Edit submission”. 
 #. All fields will become editable. When corrections are complete, click “Submit” at the bottom of the requisition. Requisition status will revert to “SUBMITTED”.
 #. An email notification will confirm the revision, with the subject “An Existing Requisition Was Edited by a Requisitioner.”
-#. OICR Accessioners will review your edited requisition and accept or reject the revised requisition.  If your requisition was previously approved and materials shipped to OICR, OICR Accessioners and Laboratory users will correct errors in de-identified records and Sign Out users will review and correct PHI fields at OICR as necessary.  Requisition form changes may be reviewed at any time by downloading a copy of any version of the original or edited requisition from the requisition case history, see section Case History Review.   
+#. OICR Accessioners will review your edited requisition and accept or reject the revised requisition.  If your requisition was previously approved and materials shipped to OICR, OICR Accessioners and Laboratory users will correct errors in de-identified records and Sign Out users will review and correct PHI fields at OICR as necessary.  Requisition form changes may be reviewed at any time by downloading a copy of any version of the original or edited requisition from the requisition case history, see :ref:`case-history`.   
 #. The Requisitioner will receive an email with the subject header “Your Requisition Was Approved.  Ship Materials to OICR.”  Follow instructions within the body of the email if material shipment is pending.  If materials were shipped to OICR Genomics after a prior requisition approval, disregard instructions for shipment.  
 
 Withdrawing a Study Specific Requisition (Mistaken Submission)
@@ -51,7 +51,7 @@ At any time, a requisition may be withdrawn by the Requisitioner in the case of 
 
 #. From your account dashboard navigate to the “Submissions” tab and select the study specific form.  
 #. From the “Actions” column, select “Edit Submission” (for submitted and approved requisitions), or “Withdraw Submission” (for submitted, but not yet approved requisitions) 
-#. From within the requisition form, select “Withdraw submission” and select “sample withdrawn” as seen below. Enter the reason for withdrawal of the requisition in the text field; justification is required.  The information will appear in the case history and be visible to other roles. Do not include any PHI in the text field. Click “Submit” at the bottom of form.
+#. From within the requisition form, select “Withdraw submission” and select “sample withdrawn”. Enter the reason for withdrawal of the requisition in the text field; justification is required.  The information will appear in the case history and be visible to other roles. Do not include any PHI in the text field. Click “Submit” at the bottom of form.
 #. An email notification will be sent to the Requisitioner and Accessioner with subject “A Requisition Has Been Cancelled (Mistaken Submission).”  The requisition status will display “Sample Withdrawn” and the justification will appear within the current requisition version.
 #. For submitted and approved requisitions, OICR Accessioners will receive an email indicating that the sample should not be processed and will be set aside for return to your institute. 
 
@@ -61,8 +61,8 @@ Re-submitting a Denied (Rejected) Submission
 If an Accessioner at OICR has rejected your requisition submission due to a data entry error or other discrepancy, please review the case history of the requisition and correct or provide further information to clarify the requisition issue.  Do not communicate PHI to OICR staff.
 
 #. When you receive a notification email with subject header “Your Requisition Was Denied.  Do Not Ship Sample(s)”, review is required.   From your account dashboard, navigate to the “Submissions” tab and select the study. 
-#. Select and view the patient requisition “ID” with status “Submission Denied” from the dashboard. Select the “Case History” tab and scroll to the “Action” case log “Submission Denied”.  Review the “Comment” section to review corrective recommendations and/or data requiring review, as seen below.
-#. You may directly proceed to re-open the submission from the case history tab by selecting “Reopen to edit”, as seen above, or from the main study dashboard. Requisition status will change from “Submission Denied” to “Submission Reopened”.
+#. Select and view the patient requisition “ID” with status “Submission Denied” from the dashboard. Select the “Case History” tab and scroll to the “Action” case log “Submission Denied”.  Review the “Comment” section to review corrective recommendations and/or data requiring review.
+#. You may directly proceed to re-open the submission from the case history tab by selecting “Reopen to edit”, or from the main study dashboard. Requisition status will change from “Submission Denied” to “Submission Reopened”.
 #. From the submission or case history tab or the main study dashboard, select “Edit Submission”. 
 #. When corrections are complete, click “Submit” at the bottom of the requisition.  The requisition process will then begin again.  Requisition status will revert to “SUBMITTED”.
 
@@ -118,6 +118,7 @@ Non-PHI Correction
 #. The status of the requisition will change to “Reopened”.
 #. Revise affected non-PHI fields within the requisition, attest “Yes, my edits are complete and data is ready for review,” and submit. The status will change to “Submitted” and you will receive an email confirming the changes. 
 #. If desired, you can download the requisition. Select the study requisition and from the “Actions” column and select “Download Requisition”.  As a requisitioner, this PDF will contain PHI.  Prior requisition form versions are available in the requisition case history. 
+
 Note: existing sample submission workflows and approvals will be reactivated.  Accessioners will approve the revised submission.  An email will be sent advising to ship samples, this may be ignored. Laboratory users will update the draft clinical report, and a revised clinical report will be issued. 
 
 

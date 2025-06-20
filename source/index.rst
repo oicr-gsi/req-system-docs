@@ -15,8 +15,9 @@ documentation for details.
    :maxdepth: 2
    :numbered:
 
-   navigation
+   intro
    users
+   navigation
    requisitioners
    accessioners
    laboratory

@@ -7,7 +7,9 @@ All users begin their session at OICR Genomics Requisition System landing page. 
 Dashboard
 ==========
 
-Upon user login, users are directed to their dashboard as seen above.  Each menu tab contains the following information:
+.. image:: images/dashboard.png
+
+Upon user login, users are directed to their dashboard.  Each menu tab contains the following information:
 
 * Dashboard: All recent activity including submitted requisitions and associated identities (IDs).
 * My Account (My Profile): User account information.
@@ -32,10 +34,14 @@ Once a user selects a requisition form from the Submission drop-down, they will 
 Summary section
 ---------------
 
-The summary section is an aggregate view of all requisition status states. Note, status state icons will only appear in the “Summary” field after a requisition has reached this status state at least once for a given study form. For a complete list of possible statuses, see Requisition Lifecycle. 
+.. image:: images/submissions-summary.png
+
+The summary section is an aggregate view of all :ref:`requisition-statuses`. Note, status state icons will only appear in the “Summary” field after a requisition has reached this status state at least once for a given study form. For a complete list of possible statuses, see :ref:`requisition-lifecycle`. 
 
 Table with submissions
 ----------------------
+
+.. image:: images/submissions-table.png
 
 The submissions table contains the status of all study requisitions the user can view. 
 
@@ -53,6 +59,8 @@ The submissions table contains the status of all study requisitions the user can
 Requisition Page
 ----------------
 
+.. image:: images/requisition.png
+
 The requisition page, accessed through the Study Submissions page, has the full contents of the requisition forms that the user is permitted to view (e.g. a Laboratory User cannot view submissions that are not approved, nor can they view PHI).
 
 On the left side is a listing of all requisition forms for this study, including the status, last modified date, and Action drop-down from the Study Submissions page. The same set of actions is available at the top right for the form currently in view. 
@@ -62,13 +70,17 @@ In the center is a specific requisition. The unique requisition ID is at the top
 The submission tab shows the contents of the form as it was submitted. If permitted by role and status, modifications are also made here, including uploading QC and clinical reports.
 
 
+.. _case-history:
+
 Requisition Case History
 ------------------------
 
+.. image:: images/case-history.png
+
 The case history contains a date and time stamped audit log of all requisition status changes as performed by all users. All requisition status changes, Accessioner submission denials and rejected draft genomic report notes may be reviewed from the “Case History” tab
 
-#. Select a requisition ID from the study dashboard as seen below.  
-#. Select the “Case History” tab, as seen below. 
+#. Select a requisition ID from the study dashboard.  
+#. Select the “Case History” tab. 
 
 
 Manage Forms

@@ -4,17 +4,19 @@ Study Administrators
 
 The study specific administrator has no access to PHI but can build requisition forms, configure study-specific roles, audit submission logs, and edit email templates.
 
+.. _configure-study-roles:
+
 Configuring Study Specific User Roles
 =====================================
 
-Users for each study requisition form must be defined and access granted or revoked by the Administrator; refer to “request a user account/access change request” section.  
+Users for each study requisition form must be defined and access granted or revoked by the Administrator; refer to :ref:`request-user` section.  
 
 Adding a User
 -------------
 
 #. Navigate to the “Manage Forms” tab and select the study specific requisition form. 
 #. Click on the subheader “People.”
-#. For each available role, assign an institutional email address by clicking “Add to Staff List” as seen above.  A popup box will appear. Multiple email addresses may be added at once to a specific role. 
+#. For each available role, assign an institutional email address by clicking “Add to Staff List”.  A popup box will appear. Multiple email addresses may be added at once to a specific role. 
 #. User roles may also be edited under the “Actions>edit” menu.  A popup window will appear and enable assignment of multiple roles to a single user, or to change their individual role assignments within a study specific requisition.  Alter the user’s roles by marking or unchecking the roles that apply.
 
 Removing a User
@@ -31,7 +33,7 @@ Multiple users may also be deleted at once (bulk) by selecting the users in the 
 Reviewing Master Role Records for Study Specific Requisitions
 --------------------------------------------------------------
 
-For each study requisition, assigned user roles (Accessioner, Sign Out, Requisitioner, Administrator, Laboratory) may be reviewed and/or edited by navigating and clicking on the respective role within the summary banner as seen below.  Role specific bulk user role Addition/Removal may be completed with this feature and/or editing of a single role.
+For each study requisition, assigned user roles (Accessioner, Sign Out, Requisitioner, Administrator, Laboratory) may be reviewed and/or edited by navigating and clicking on the respective role within the summary banner. Role specific bulk user role Addition/Removal may be completed with this feature and/or editing of a single role.
 
 
 Building/Modifying Requisition Forms
@@ -51,7 +53,7 @@ Configure Requisition Form Title, Description, Requisition ID (Study Code)
 Add/Configure Form Section Headers (Titles)
 --------------------------------------------
 
-Section Form Headers segregate related questions with a section specific title as seen below. To create or configure a section header, follow these instructions:
+Section Form Headers segregate related questions with a section specific title. To create or configure a section header, follow these instructions:
 
 #. From the Study specific requisition form navigate to the “Build Form”.
 #. From the right-hand margin, under “Sections”, select “Sections”.  A popup will appear.  Specify the section header title.  A section description may be added and will appear below the title on the requisition form.  Click “Save” 
@@ -66,6 +68,10 @@ Certain sections of a form may contain PHI that must be restricted to authorized
 #. Mark the state (ie the process that the section relates to): init, submit, delete, reopen, withdraw sample, approve, deny, withdraw sample, approve, deny, withdraw consent, draft report ready for review, report accepted-signout complete, withdraw consent, draft report not accepted.
 #. Under “Permission”, specify each user role that may view and/or edit a section by selecting: “No Access”, “Read” only or “Write”, see below; this must be specified for each process stage. 
 
+.. image:: images/build-permissions.png
+
+.. _add-new-field:
+
 Adding/ Configuring a Requisition Form New Text Field 
 ------------------------------------------------------------------------
 
@@ -74,6 +80,8 @@ The “Build” page allows extensive customization of any form.
 #. To add a new text field, select “Text” under “Form Field Types”.
 #. Add text to the “Label/Question” field as it is intended to appear on the form. A “Note” may be added (optional) and will appear as a text bubble to the right of the text field.  See below.
 #. Text Field inputs may be restricted by specifying a “Text Input”.  Character entry may be restricted to text, numeric, email address, email addresses, or URLs.  For numeric entries, input ranges may be specified and units.
+
+.. _required-entry:
 
 Obligate Text Field Configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -96,7 +104,7 @@ Editing General Text Field Options on Cloned Requisition Forms
 
 All study specific requisition fields may be customized by clicking on the edit icon (pencil  ). These activities may be conducted from the “Build” page.
 
-#. To edit the text of a given text box as it appears on the requisition form, click the edit icon.  Edit the text field “Label/Question”.  A “Note” may be added and will appear as a text bubble when a user hovers their cursor over the respective text field. See figure in “Adding/ Configuring a Requisition Form New Text Field”.   If required, specify/alter if text entry is required by marking/unmarking the option “Make this a required question” and click “Save” as seen in Obligate Text Field Configuration.  
+#. To edit the text of a given text box as it appears on the requisition form, click the edit icon.  Edit the text field “Label/Question”.  A “Note” may be added and will appear as a text bubble when a user hovers their cursor over the respective text field. See :ref:`add-new-field`.   If required, specify/alter if text entry is required by marking/unmarking the option “Make this a required question” and click “Save” as in :ref:`required-entry`.  
 
 
 Adding or Configuring a Form’s Multiple-Choice Selection Field 
@@ -112,7 +120,7 @@ Forms may contain options for users to select materials for submission. To creat
 		* 2|1 x 10ml whole blood (STRECK or EDTA)
 		* 3|3 x 10ml whole blood (STRECK)
 
-	If you are migrating this form from a previous version, do not split up the unique identifier and the text field. The unique identifier is used by the requisition system to record which option was selected.
+	**If you are migrating this form from a previous version, do not split up the unique identifier and the text field.** The unique identifier is used by the requisition system to record which option was selected.
 
 #. If this is a required response, under the “Settings” tab, select “Make this a required question”.
 
@@ -120,7 +128,7 @@ Forms may contain options for users to select materials for submission. To creat
 Add a Downloadable File (PDF) to a Study Requisition
 ------------------------------------------------------------------------
 
-If a guidance document for a particular text field is requested by a user, a downloadable PDF may be associated with a text field, by uploading a PDF to the form template using the “upload” option, as seen below:
+If a guidance document for a particular text field is requested by a user, a downloadable PDF may be associated with a text field, by uploading a PDF to the form template using the “upload” option.
 
 Add Ability to Upload a File (PDF) to a Study Requisition
 ------------------------------------------------------------------------
@@ -176,6 +184,9 @@ To configure emails:
 #. Navigate to the “Manage forms” tab and select the study specific requisition form. 
 #. Click on the subheader “configure”.
 #. Under the “emails” column, click “edit” on a particular “Form Stage-Emails” as seen below.
+
+	.. image:: images/edit-emails.png
+
 #. Various fields may be edited from the edit window, see below.  Various settings are preconfigured upon cloning of a study requisition template.
 
 	#. Change the sender “email from” address, i.e. the email address form which all notification emails are sent

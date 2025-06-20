@@ -4,10 +4,12 @@ Global User Roles
 
 There are three global user roles: Form Administrators, global Administrators, and no role set. Every user has no role until they are granted one by a global Administrator.
 
+.. _form-admins:
+
 Form Administrators
 ===================
 
-The Form Administrator is a global role that can perform the same tasks as study specific Administrators, but can see all requisition study forms. The Form Administrator can additionally clone new forms, archive and delete forms, and back up and restore forms from Github.
+The Form Administrator is a global role that can perform the same tasks as :doc:`study-admins`, but can see all requisition study forms. The Form Administrator can additionally clone new forms, archive and delete forms, and back up and restore forms from Github.
 
 Creating (cloning) a new requisition form
 ------------------------------------------
@@ -30,7 +32,7 @@ Archive a Study Specific Requisition Form
 ------------------------------------------------------------
 
 1.	Navigate to “Manage Forms>Study Specific Requisition”.  
-2.	From the gear icon in the upper right margin, select “Delete Form” and select “No, don’t delete, archive only” as seen below. 
+2.	From the gear icon in the upper right margin, select “Delete Form” and select “No, don’t delete, archive only”. 
 3.	To view archived forms, navigate to “Manage Forms” from the Dashboard, and select “show archived”. 
 4.	The archived form may be cloned, imported, exported or undeleted from the requisition gear icon.  When an archived form is “undeleted”, the form will reappear on the forms dashboard.
 5.	The Excel-based  report may be configured for specific information.
@@ -42,8 +44,11 @@ Committing (Exporting) Individual Form Metadata to Github
 All changes to a specific form’s metadata may be committed to the private OICR Github repository (webdev_gsi-forms). Exporting a form will “copy” a form’s existing meta data which includes form structure, question definitions, workflows, and emails. Submissions will not be impacted, nor are they exported to GitHub.   Staff assigned to the form will not be impacted, nor will assigned staff be exported to GitHub.  Should the need arise in future, the import function of the requisition system may recall the form metadata to an active form from Github.  
 
 1.	From a requisition form menu, navigate to the gear icon and select “Export Form” as seen below. 
+	
+	.. image:: images/export-form-meta.png
+
 2.	A dialogue box will appear to confirm the export of the form template to Github.
-3.	Review the export in Github (https://github.com/gsi-forms/webdev_gsi-forms) by navigating to the “<> code” icon and selecting “Compare” as seen below. 
+3.	Review the export in Github (https://github.com/gsi-forms/webdev_gsi-forms) by navigating to the “<> code” icon and selecting “Compare”. 
 4.	Scroll downward to the appropriate commit which will appear as “export from meta”.
 5.	Click on “export form meta” as seen above, record the commit ID.  This ID will help confirm the correct form is imported if the need arises in future. 
 6.	At the bottom of the page, include a comment regarding the form committed and changes made to the form. 
@@ -74,9 +79,9 @@ Merging Published Requisition Forms (New Software Release)
 Legacy requisition forms may be merged into a new unified study form if required by the Forms Administrator.  This scenario may occur if form fields change, such as with the addition of a new assay to a clinical study, or if software versions result in large scale changes to requisition system workflows.  All existing requisitions will be ported into the new study form and will be permanently removed from the legacy study form. To execute a merger, proceed with the following steps.
 
 1.	Prior to moving existing (legacy) study specific requisitions to a new form, navigate to the gear icon and select “MISO download”.  
-2.	Save a copy of the excel report as seen below. Note the requisition “Submission ID” field will be the same between the original study form present in version 1 of the (legacy) form, and in version 2 of the new form after importing the requisition. The requisition ID “ID” however, will be updated.  The number will remain the same, but the form key will change to the new requisition form “form key”, in the example below the new form key is “V3PIL-XX”.  If the forms key is not changed between version 1 (legacy) and version 2 of the form, the requisition ID will remain exactly the same.
+2.	Save a copy of the excel report. Note the requisition “Submission ID” field will be the same between the original study form present in version 1 of the (legacy) form, and in version 2 of the new form after importing the requisition. The requisition ID “ID” however, will be updated.  The number will remain the same, but the form key will change to the new requisition form “form key”, in the example below the new form key is “V3PIL-XX”.  If the forms key is not changed between version 1 (legacy) and version 2 of the form, the requisition ID will remain exactly the same.
 3.	Unpublish the legacy form to prevent new submissions from occurring from the legacy form.
-4.	Select “Move Submissions” from either the gear icon on the “Manage Forms” tab, or directly from the form specific configuration pages as seen below. 
+4.	Select “Move Submissions” from either the gear icon on the “Manage Forms” tab, or directly from the form specific configuration pages. 
 5.	A warning dialog will appear. Follow instructions listed and select “Yes, Move”. 
 6.	Note, the case history for each imported requisition will contain all prior status stage changes executed from the legacy form. Any existing versioned draft genomic, QC or signed out clinical report will be viewable to authorized study roles.  PDF files will retain the legacy study requisition ID and will not be updated.  
 7.	From the new form, repeat steps 1& 2.  Use the “Submission ID” to map old requisitions to the new requisition “ID”.  Provide this mapping key to the study requisitioners if the forms key has changed.  They may need to update their records to ensure continuity.
@@ -84,13 +89,17 @@ Legacy requisition forms may be merged into a new unified study form if required
 9.	Inform the requisitioner, that the legacy form will no longer be visible, nor will the legacy form be populated with requisitions. 
 
 
-Global Administrator Processes
+.. _global-admins:
+
+Global Administrators
 ===============================
 
 The global Administrator is a role that permits full access to the Requisition system, except for PHI and submissions.
 
 Navigating the Admin Menu
 -------------------------
+
+.. image:: images/admin-menu.png
 
 1.	Click the logged-in user’s name at the top left and select “Admin Menu”.
 2.	A new view on the Dashboard will be visible with 5 tabs: Users, Site Configuration, Manage Content, Manage Forms, and Submissions. Manage Forms and Submissions operate the same way as for other users.
@@ -123,6 +132,7 @@ Next, grant permissions on Github to webdev_gsi-forms and nodejs-apps.
 7.	The new admin should get an email inviting them to the repository, or they can navigate to the repository to accept the invitation.
 8.	Repeat steps 1-7 for https://github.com/gsi-forms/nodejs-apps.
 
+
 Modify a system email
 -----------------------
 
@@ -137,6 +147,8 @@ Modify a system email
 4.	Edit the html for the email as desired.
 5.	Add a commit message to the box at the bottom explaining what was changed. Select ‘Commit directly to master branch’ and ‘Commit changes’.
 6.	Within about 15 minutes, the table on ‘Manage Contents’ page should show a new last modified time and the email will be ready to send.
+
+.. image:: images/mod-system-email.png
 
 .. toctree::
    :maxdepth: 2
