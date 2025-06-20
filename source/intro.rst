@@ -1,18 +1,10 @@
-###############
-Introduction
-###############
+####################################
+About Requisitions
+####################################
 
-The OICR Genomics Requisition and Reporting System (the Requisition System) is a user role-based secure portal for the submission of test requisitions and associated tissues for OICR Genomics’ validated genomics assays. OICR Genomics complies with the ISO 15189 standard. 
-
-Scope
-======
 
 ISO 15189 requires patient PHI to be collected and included on clinical reports, however, OICR does not permit receipt of PHI. A system was designed to a) create requisition forms, b) de-identify samples prior to receipt at OICR, and c) re-associate PHI with clinical results on the final report, which is only visible to the reviewing licensed Geneticist and Clinical Coordinator. This ensures that samples can be appropriately tracked throughout laboratory processing without exposing PHI to OICR staff.  OICR engaged independent third parties to conduct a Privacy Impact and a Threats and Vulnerabilities Assessment, addressing audit recommendations before implementing this system. 
 
-The purpose of this Standard Operating Procedure (SOP) is to describe the Requisition and Reporting software and to define procedures for its use and maintenance, including account access, study requisition form configuration, email notification management, case history management, user roles and functions, system administration and updates.
-
-System Description
-==================
 
 The OICR Genomics Requisition System retains all required PHI in an access-restricted database accessible to Clinical Coordinators and licensed Geneticists. PHI must never be transmitted, shipped or communicated in print or via digital platforms such as Slack or email; PHI may only be recorded via study specific requisition forms through the OICR Genomics Requisition System.
 
@@ -55,6 +47,8 @@ Below is a full list of every state that a requisition can be in. The permissibl
 * Report Accepted, Sign Out Complete:  A Geneticist (Sign Out user) has reviewed the draft genomic report and accepted the case analysis. Sign Out is complete and a clinical report may be downloaded by a Requisitioner.
 * Draft Report Not Accepted:  A Geneticist has not accepted the draft genomic report, revision is required.  Laboratory user must update/correct draft  genomic and/or QC report and upload copies.
 * Sign Out Rescinded with PHI: A requisitioner has rescinded a signed out clinical report due to discovery of an error in PHI by a requisitioner or treating physician.     
+
+
 
 .. _information-collected:
 

@@ -48,13 +48,14 @@ Passwords must be reset every year.  Users will be prompted to select a new pass
 
 .. _user-roles:
 
+##############
 User Roles
-===========================================
+##############
 
 There are two categories of user roles: global user roles and study specific user roles. A specific user can have from none to all of these user roles.
 
 Study Roles
-------------
+=============
 
 Study specific user roles are assigned per form, granting specific permissions to that form alone. These roles ensure tracking of all stages of a requisition lifecycle from sample submission to report generation and sign out. 
 
@@ -99,7 +100,7 @@ Key activities of each role are defined below.
 
 
 Global Roles
-------------------------------------------
+============
 
 Global user roles control the Requisition System, permitting users to modify system level pages, emails, and forms. These roles are visible from My Account > Account Settings, in the User Settings area. 
 
@@ -122,6 +123,65 @@ There are three global user roles:
 * No role (no PHI access): the default level for all users not granted one of the two other roles.
 
 Every user has no role until they are granted one by a global Administrator.
+
+
+####################
+Notification Emails
+####################
+
+Study roles may receive a number of notifications by email. Their subjects, targets, and next steps are detailed below.
+
++--------------------------+-----------------+---------------------------------------+
+| Email Subject            | Who is notified |  Next Steps                           |
++==========================+=================+=======================================+
+| Submitted                |   accessioner,  |  :ref:`approve-submission`            |
+|                          |   admin         |                                       |
++--------------------------+-----------------+---------------------------------------+
+| Requisition received     |   requisitioner |  Wait for approval                    |
++--------------------------+-----------------+---------------------------------------+
+| Approval required        |   accessioner,  |   :ref:`approve-edited-submission`    |
+|                          |   laboratory    |                                       |
++--------------------------+-----------------+---------------------------------------+
+| Withdrawn                | requisitioner,  |                                       |
+|                          | accessioner,    |   Accessioner: :ref:`acc-withdraw`    |
+|                          | admin           |                                       |
++--------------------------+-----------------+---------------------------------------+
+| Approved to ship samples |   requisitioner |   :ref:`ship-materials`               |  
++--------------------------+-----------------+---------------------------------------+
+| Incoming shipment        |   accessioner   |   Informational                       |
++--------------------------+-----------------+---------------------------------------+
+| Denied                   |   requisitioner |   :ref:`denied-submission`            |
++--------------------------+-----------------+---------------------------------------+
+| Consent withdrawn        |   requisitioner,|  Requisitioner, Admin: informational; |
+|                          |   accessioner,  |  Accessioner: :ref:`acc-consent`;     |
+|                          |   admin,        |  Laboratory: :ref:`lab-consent`;      |
+|                          |   laboratory,   |  Sign-out: :ref:`sign-consent`;       |
+|                          |   signout       |                                       |
++--------------------------+-----------------+---------------------------------------+
+| Draft ready for review   |   signout       |  :ref:`review-draft`                  |
++--------------------------+-----------------+---------------------------------------+
+| Signed out               |   requisitioner,|   Requisitioner: :ref:`req-signedout` |
+|                          |   accessioner,  |                                       |
+|                          |   admin,        |                                       |
+|                          |   laboratory    |                                       |
++--------------------------+-----------------+---------------------------------------+
+| Rescinded  (Non-PHI)     |   laboratory,   |   :ref:`lab-rescinded`                |
+|                          |   admin         |                                       |
++--------------------------+-----------------+---------------------------------------+
+| Rescinded (PHI and       |   laboratory,   |   :ref:`lab-rescinded`                |
+| non-PHI)                 |   admin         |                                       |
++--------------------------+-----------------+---------------------------------------+
+| Rescinded (PHI only)     |   admin         |   Informational                       |
++--------------------------+-----------------+---------------------------------------+
+| PHI updated              |   admin,        |   :ref:`sign-phi-change`              |
+|                          |   signout       |                                       |
++--------------------------+-----------------+---------------------------------------+
+| PHI updates rejected     |   requisitioner |   :ref:`phi-reject`                   |
++--------------------------+-----------------+---------------------------------------+
+| Draft not accepted       |   laboratory    |   :ref:`draft-reopen`                 |
++--------------------------+-----------------+---------------------------------------+
+| Draft re-opened          |   laboratory    |   Informational                       |
++--------------------------+-----------------+---------------------------------------+
 
 
 .. toctree::

@@ -14,6 +14,8 @@ Uploading a Draft Clinical Report
 #. Scroll to the requisition header “Data Report”.  Upload the draft clinical report PDF (no PHI) under Data report>Genomic report (PDF).  Upload the QC Report under Data report>QC report (PDF). Select “Data is ready for review” and click submit. The draft report can no longer be edited by a Laboratory user until Geneticist (Sign Out user) review.
 #. The requisition status will display “Draft Report Ready for Review”. The Sign Out user will receive an email and will be able to review the draft report.
 
+.. _draft-reopen:
+
 Re-Opening (Revising) a Rejected Draft Clinical Report
 ==========================================================
 
@@ -24,10 +26,12 @@ A Geneticist (Sign Out user) may reject a draft clinical report.  The CGI team i
 #. From the requisition case history, review the Geneticist’s comments and seek resolution, see below.  If further discussion is required, contact the responsible Geneticist.  Revise the draft genomic report. 
 #. From the case history tab, select edit, or from the study requisition dashboard, select the requisition and under “Actions” select “Edit Submission”.  
 #. Scroll to the bottom of the requisition and select “Reopen submission”.  A text box will appear.  Provide a justification for reopening and editing the draft genomic report. Click “Submit”.
-#. The requisition status will change to “Submission Approved”.  A notification email will be sent to the Sign Out user , alerting Geneticists that a revised clinical report is anticipated. The data report PDF fields will now permit upload of a new genomic report and/or QC report.  
+#. The requisition status will change to “Submission Approved”.  The data report PDF fields will now permit upload of a new genomic report and/or QC report.  
 #. To remove the existing erroneous draft genome report or QC report, click “Remove”.  
 #. Upload the corrected and versioned draft genomic report and/or QC PDF report, select “Data is ready for review” and click “submit”.  The draft report can no longer be edited by a Laboratory user. Note, prior draft reports may be reviewed in the requisition case history.
 #. The requisition status will display “Draft Report Ready for Review”. The Sign Out user will receive an email and will review the revised draft report.
+
+.. _lab-rescinded:
 
 Reviewing a Requisitioner-Edited Submission to “Non-PHI” or “PHI & Non-PHI”
 ============================================================================
@@ -52,6 +56,7 @@ Reviewing a Requisitioner-Edited Submission (Laboratory-CGI)
 #. If the requisition status is “Submission approved”, CGI must review the changes to the requisition for non-PHI field changes that are not captured within MISO LIMS that may alter the draft genomic report and/or QC report. Verify requisition date and time stamps to ensure you are reviewing the updated requisition.
 #. If necessary, revise the draft genomic and QC report with changed information following procedures as outlined in :ref:`upload-draft`. 
 
+.. _lab-consent:
 
 Consent Withdrawal 
 ===================

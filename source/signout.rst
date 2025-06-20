@@ -9,8 +9,7 @@ Licensed Geneticists (CCMG/ACMG) must review and approve draft genomic reports p
 Reviewing and Accepting/Rejecting a Draft Clinical Report
 ==========================================================
 
-A notification email with subject “A draft clinical report is ready for review” will be received.
-
+A notification email will be received.
 
 #. From your account dashboard, navigate to the submissions tab and select the study specific requisition dashboard. 
 #. All study requisitions requiring review will have status “Draft Report Ready for Review” Select “Edit Submission” for the respective requisition from the “Actions” column.
@@ -20,18 +19,13 @@ A notification email with subject “A draft clinical report is ready for review
 #. If accepted, update the draft report to include PHI. Upload the PHI containing clinical report PDF and select “Submit”. The clinical report is now viewable to the Requisitioner.  The requisition status will display “Report Accepted, Sign Out Complete”.  
 
 
-Reviewing Change Requests to Rescinded Reports 
-==============================================
+
+Reviewing PHI Change Requests to Rescinded Reports 
+==================================================
 
 If a treating physician or a clinical coordinator observes an error in patient information (PHI, non-PHI, or both) on a signed out clinical report, the information may be corrected, and an updated clinical report will need to be issued.  
 
-
-Non-PHI change requests
------------------------
-
-If the correction involves non-PHI, both PHI and non-PHI, or if the report has not yet been signed out, the report will be rescinded and sent back to the Accessioner for review. After Accessioner and Laboratory review and revision of the draft report, an email notification will be sent to the Sign Out user with the subject “A draft clinical report is ready for review” and the requisition will change to status “Draft Report Ready for Review”.  A revised (if necessary) draft genomic and QC report will be available for review.  Note, previous draft genomic and QC reports are available for review in the requisition case history.
-
-Follow instructions in :ref:`review-draft`.  Prior requisition versions may be reviewed in requisition case history.
+.. _sign-phi-change:
 
 PHI Change Requests
 -------------------
@@ -52,20 +46,22 @@ To accept the changes:
 
 #. Scroll to the section “Approve Draft Report” and select “Accept” (the draft report does not contain PHI and is not impacted by a change in PHI).  
 #. Next, remove the existing clinical report (containing PHI), and replace it with the clinical report with the corrected PHI. Scroll to the bottom of the requisition and select “Submit.” 
-#. The state of the requisition will change to “Report Accepted, Sign Out Complete.”  The administrator, laboratory, requisitioner and sign out user will receive a notification “A clinical report has been signed out. Case report complete.” 
+#. The state of the requisition will change to “Report Accepted, Sign Out Complete.”  The administrator, laboratory, and requisitioner will receive an email that the case is complete.
 
 
 To reject the changes:
 
 #. Scroll to the section “Approve Draft Report” and select “Reject” (the draft report does not contain PHI and is not impacted by a change in PHI). In the comments box, include your justification for not updating the PHI on the clinical requisition; a comment is required. Do not include PHI. Scroll to the bottom of the form and select submit.
-#. The Requisitioner, Sign Out User and Administrator will receive an email “Requisitioner edits to PHI fields were rejected by the Sign Out User.  Edit submission, revert prior edits and resubmit.” 
+#. The Requisitioner will receive an email.
+
+.. _sign-consent:
 
 Consent Withdrawal
 ==================
 
 Withdrawal of patient consent is initiated by the study Clinical Coordinator (Requisitioner). 
 
-#. A notification email with subject “Patient consent has been withdrawn; stop processing samples and/or data” will be received by all roles.  Consent withdrawal will appear within the requisition case history and may be quickly identified on study dashboards under “Consent withdrawn”. The requisition status will display “Withdraw Consent”.
+#. A notification email will be received by all roles.  Consent withdrawal will appear within the requisition case history and may be quickly identified on study dashboards under “Consent withdrawn”. The requisition status will display “Withdraw Consent”.
 #. If the clinical report has not been signed out, stop review.  If Sign Out is complete, no further action is required. 
 
 

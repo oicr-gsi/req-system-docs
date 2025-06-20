@@ -1,13 +1,10 @@
-##################
-Global User Roles
-##################
-
-There are three global user roles: Form Administrators, global Administrators, and no role set. Every user has no role until they are granted one by a global Administrator.
-
 .. _form-admins:
 
+
+###################
 Form Administrators
-===================
+###################
+
 
 The Form Administrator is a global role that can perform the same tasks as :doc:`study-admins`, but can see all requisition study forms. The Form Administrator can additionally clone new forms, archive and delete forms, and back up and restore forms from Github.
 
@@ -91,8 +88,9 @@ Legacy requisition forms may be merged into a new unified study form if required
 
 .. _global-admins:
 
+########################
 Global Administrators
-===============================
+########################
 
 The global Administrator is a role that permits full access to the Requisition system, except for PHI and submissions.
 

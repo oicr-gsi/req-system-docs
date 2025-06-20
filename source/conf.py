@@ -6,8 +6,8 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'req-system-docs'
-copyright = '2025, Morgan Taschuk'
+project = 'Genomics Requisition System User Manual'
+copyright = '2025, OICR Genomics'
 author = 'Morgan Taschuk'
 
 # -- General configuration ---------------------------------------------------
@@ -23,5 +23,15 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'
-html_static_path = []
+# https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html
+html_theme = 'sphinx_rtd_theme'
+html_theme_options = {
+	"logo_only": "True",
+	"style_nav_header_background":"white"
+}
+#https://www.sphinx-doc.org/en/master/usage/configuration.html
+html_static_path = ['_static']
+html_css_files = ["custom.css"]
+html_logo = 'images/logo-genomics-forms.png'
+html_title = "OICR Genomics Requisition System User Manual"
+html_favicon = "images/favicon.png"
