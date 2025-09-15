@@ -5,7 +5,6 @@
 Form Administrators
 ###################
 
-
 The Form Administrator is a global role that can perform the same tasks as :doc:`study-admins`, but can see all requisition study forms. The Form Administrator can additionally clone new forms, archive and delete forms, and back up and restore forms from Github.
 
 Creating (cloning) a new requisition form
@@ -14,7 +13,6 @@ Creating (cloning) a new requisition form
 #. Navigate to the “Manage Forms” tab and select the form to be cloned. 
 #. Click on the gear box in the right-hand margin and select “Clone Form”.
 #. Select the clone draft form.  Note the cloned form will be titled “OICR Genomics Requisition Form Template” with the exact time the form was cloned.
-
 
 Permanently Delete a Draft Study Specific Requisition Form
 ------------------------------------------------------------
@@ -147,6 +145,20 @@ Modify a system email
 6.	Within about 15 minutes, the table on ‘Manage Contents’ page should show a new last modified time and the email will be ready to send.
 
 .. image:: images/mod-system-email.png
+
+
+Disabling a user's access
+--------------------------
+
+It may be required to disable access for a user to the entire requisition system. If you want to remove their access from a particular form, use :ref:`remove-user-admin`.
+
+#. Go to the Admin Menu and click on the Users tab, if not already clicked
+#. Find the user in the User List and select the tick box to the left of their username. In the bulk actions menu, select "Block the selected user". **Do not delete the user**. 
+
+.. note:: Do not **delete** users from the Admin menu Users page. This will remove all requisitions that they have ever submitted to the system.
+
+
+
 
 .. toctree::
    :maxdepth: 2

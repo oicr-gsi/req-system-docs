@@ -19,6 +19,8 @@ Adding a User
 #. For each available role, assign an institutional email address by clicking “Add to Staff List”.  A popup box will appear. Multiple email addresses may be added at once to a specific role. 
 #. User roles may also be edited under the “Actions>edit” menu.  A popup window will appear and enable assignment of multiple roles to a single user, or to change their individual role assignments within a study specific requisition.  Alter the user’s roles by marking or unchecking the roles that apply.
 
+.. _remove-user-admin:
+
 Removing a User
 ---------------
 
