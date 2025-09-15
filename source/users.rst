@@ -186,3 +186,9 @@ Study roles may receive a number of notifications by email. Their subjects, targ
 
 .. toctree::
    :maxdepth: 2
+
++----------------+----------------------+
+| **Change Log** | `Github commit log`_ |
++----------------+----------------------+
+
+.. _Github commit log : https://github.com/oicr-gsi/req-system-docs/commits/main/source/users.rst

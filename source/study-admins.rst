@@ -207,3 +207,9 @@ To configure emails:
 
 .. toctree::
    :maxdepth: 2
+
++----------------+----------------------+
+| **Change Log** | `Github commit log`_ |
++----------------+----------------------+
+
+.. _Github commit log : https://github.com/oicr-gsi/req-system-docs/commits/main/source/study-admins.rst

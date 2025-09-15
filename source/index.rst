@@ -38,3 +38,9 @@ The `OICR Genomics Requisition and Reporting System`_ (the Requisition System) i
    
    OICR Genomics <https://genomics.oicr.on.ca>
 
+
++----------------+----------------------+
+| **Change Log** | `Github commit log`_ |
++----------------+----------------------+
+
+.. _Github commit log : https://github.com/oicr-gsi/req-system-docs/commits/main/source/index.rst

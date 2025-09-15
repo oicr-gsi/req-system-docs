@@ -67,3 +67,10 @@ Withdrawal of patient consent is initiated by the study Clinical Coordinator (Re
 
 .. toctree::
    :maxdepth: 2
+
+
++----------------+----------------------+
+| **Change Log** | `Github commit log`_ |
++----------------+----------------------+
+
+.. _Github commit log : https://github.com/oicr-gsi/req-system-docs/commits/main/source/signout.rst

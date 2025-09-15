@@ -155,3 +155,10 @@ The status of the requisition will change to “PHI updated, ready for review”
 
 .. toctree::
    :maxdepth: 2
+
+
++----------------+----------------------+
+| **Change Log** | `Github commit log`_ |
++----------------+----------------------+
+
+.. _Github commit log : https://github.com/oicr-gsi/req-system-docs/commits/main/source/requisitioners.rst

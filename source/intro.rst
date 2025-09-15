@@ -93,3 +93,9 @@ Tumors must be classified using `OncoTree codes`_.  Always select the “oncotre
 
 .. toctree::
    :maxdepth: 2
+
++----------------+----------------------+
+| **Change Log** | `Github commit log`_ |
++----------------+----------------------+
+
+.. _Github commit log : https://github.com/oicr-gsi/req-system-docs/commits/main/source/intro.rst

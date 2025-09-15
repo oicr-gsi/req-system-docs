@@ -150,3 +150,9 @@ Modify a system email
 
 .. toctree::
    :maxdepth: 2
+
++----------------+----------------------+
+| **Change Log** | `Github commit log`_ |
++----------------+----------------------+
+
+.. _Github commit log : https://github.com/oicr-gsi/req-system-docs/commits/main/source/global-users.rst

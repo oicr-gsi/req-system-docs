@@ -77,3 +77,10 @@ An email will be sent out to all interested parties and the submission will be r
 
 .. toctree::
    :maxdepth: 2
+
+
++----------------+----------------------+
+| **Change Log** | `Github commit log`_ |
++----------------+----------------------+
+
+.. _Github commit log : https://github.com/oicr-gsi/req-system-docs/commits/main/source/laboratory.rst

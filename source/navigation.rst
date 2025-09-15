@@ -92,3 +92,9 @@ The “Manage Forms” dashboard contains form management configuration options 
 .. toctree::
    :maxdepth: 2
 
+
++----------------+----------------------+
+| **Change Log** | `Github commit log`_ |
++----------------+----------------------+
+
+.. _Github commit log : https://github.com/oicr-gsi/req-system-docs/commits/main/source/navigation.rst
