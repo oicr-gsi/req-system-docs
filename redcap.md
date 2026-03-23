@@ -2,12 +2,12 @@
 | Table | Table | Table | Table |
 | ----------- | ----------- | ----------- | ----------- |
 | Header | <ul><li>(1)</li><li>(2)</li><li>(3)</li><li>(4)</li><li>(4)</li><li>(5)</li><li>(6)</li></ul> | Item | Item |
-| **Paragraph** | <ul><li>(1)</li></ul> | Item | Item |
-| **Paragraph** | <ul><li>(1)</li><li>(2)</li></ul> | Item | Item |
-| **Paragraph** | <ul><li>(1)</li><li>(2)</li><li>(3)</li></ul> | Item | Item |
-| **Paragraph** | <ul><li>(1)</li><li>(2)</li><li>(3)</li><li>(4)</li></ul> | Item | Item |
-| **Paragraph** | <ul><li>(1)</li><li>(2)</li><li>(3)</li><li>(4)</li><li>(5)</li></ul> | Item | Item |
-| **Paragraph** | <ul><li>(1)</li><li>(2)</li><li>(3)</li><li>(4)</li><li>(5)</li><li>(6)</li></ul> | Item | Item |
+| **Paragraph** | <ol><li>(1)</li></ol> | Item | Item |
+| **Paragraph** | <ol><li>(1)</li><li>(2)</li></ol> | Item | Item |
+| **Paragraph** | <ol><li>(1)</li><li>(2)</li><li>(3)</li></ol> | Item | Item |
+| **Paragraph** | <ol><li>(1)</li><li>(2)</li><li>(3)</li><li>(4)</li></ol> | Item | Item |
+| **Paragraph** | <ol><li>(1)</li><li>(2)</li><li>(3)</li><li>(4)</li><li>(5)</li></ol> | Item | Item |
+| **Paragraph** | <ol><li>(1)</li><li>(2)</li><li>(3)</li><li>(4)</li><li>(5)</li><li>(6)</li></ol> | Item | Item |
 
 
 
@@ -40,9 +40,9 @@
 ## Statuses and Conditions
 | REDCap Status | Procedure | Requisition Status | Conditions |
 | ----------- | ----------- | ----------- | ----------- |
-| **Not Submitted** | <ul><li>(1)A requisitioner begins the submission and submits Requisition Status, but does not complete either Patient Information or Specimen Information</li></ul> | <ul><li>(1) Note Submitted</li></ul> | <ul><li>(1) Patient Info, Specimen info not complete</li></ul> |
-| **Waiting Accessioner Approval** | <ul><li>(1) A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li></ul> | <ul><li>(1) Open</li></ul> | <ul><li>(1) Patient Info, Specimen info complete</li></ul> |
-| **Approved** | <ul><li>(1) A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>(2) An accessioner reviews the information on Requisition Status and selects 'Approve'</li></ul> | Item | Item |
+| **Not Submitted** | <ol><li>A requisitioner begins the submission and submits Requisition Status, but does not complete either Patient Information or Specimen Information</li></ol> | <ol><li> Note Submitted</li></ol> | <ol><li>Patient Info, Specimen info not complete</li></ol> |
+| **Waiting Accessioner Approval** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li></ol> | <ol><li>Open</li></ol> | <ol><li>Patient Info, Specimen info complete</li></ol> |
+| **Approved** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li></ol> | Item | Item |
 
 ## Instruments
 
