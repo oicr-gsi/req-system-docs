@@ -1,19 +1,3 @@
-## Syntax Notes
-| Table | Table | Table | Table |
-| ----------- | ----------- | ----------- | ----------- |
-| Header | <ul><li>(1)</li><li>(2)</li><li>(3)</li><li>(4)</li><li>(4)</li><li>(5)</li><li>(6)</li></ul> | Item | Item |
-| **Paragraph** | <ol><li>(1)</li></ol> | Item | Item |
-| **Paragraph** | <ol><li>(1)</li><li>(2)</li></ol> | Item | Item |
-| **Paragraph** | <ol><li>(1)</li><li>(2)</li><li>(3)</li></ol> | Item | Item |
-| **Paragraph** | <ol><li>(1)</li><li>(2)</li><li>(3)</li><li>(4)</li></ol> | Item | Item |
-| **Paragraph** | <ol><li>(1)</li><li>(2)</li><li>(3)</li><li>(4)</li><li>(5)</li></ol> | Item | Item |
-| **Paragraph** | <ol><li>(1)</li><li>(2)</li><li>(3)</li><li>(4)</li><li>(5)</li><li>(6)</li></ol> | Item | Item |
-
-
-
-
-
-
 # REDCap Requisition System for OICR
 ### Using REDCap's Database and Data Collection Functionality to Create an Updated Requisition System
 ## Table of Contents
@@ -23,12 +7,9 @@
 4. Data Access Groups
 5. Data Collection Flow (intended)
 6. Glossary
-7. Item
-8. Item
-9. Item
-10. Item 
+7. Project Setup
 
-## Users and Permissions
+## (1) Users and Permissions
 1. **Requisitioner:** External Collaborator clinician or clinical coordinator who submits requisitions and retrieves final reports, **access to PHI**
 2. **Accessioner:** Internal Accessioning Staff; OICR Tissue Portal, who reviews requisitions, enters them into MISO, and receives tissue shipments, **no access to PHI**
 3. **Laboratory:** Internal Staff OICR Genomics, who monitor and administrate requisitions, submit draft reports, **no access to PHI** (Note; several iterations of a draft report might be necessary before the Geneticist is satisfied)
@@ -37,16 +18,36 @@
 6. **Form Administrator:** Internal Infrastructure Staff, manages creation and upkeep of REDCap project environment. Resolves technical issues raised by Form Administrator.  No access to PHI.
 7. **Super Administrator:** Internal IT Staff, highest level of technical clearance.  Manages server and security issues with the entire REDCap instance.  **access to PHI**
 
-## Statuses and Conditions
+## (2) Statuses and Conditions
 | REDCap Status | Procedure | Requisition Status | Conditions |
 | ----------- | ----------- | ----------- | ----------- |
 | **Not Submitted** | <ol><li>A requisitioner begins the submission and submits Requisition Status, but does not complete either Patient Information or Specimen Information</li></ol> | <ol><li> Note Submitted</li></ol> | <ol><li>Patient Info, Specimen info not complete</li></ol> |
 | **Waiting Accessioner Approval** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li></ol> | <ol><li>Open</li></ol> | <ol><li>Patient Info, Specimen info complete</li></ol> |
-| **Approved** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li></ol> | Item | Item |
+| **Approved** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li></ol> | <ol><li>Open</li><li>In Progress</li></ol> |  <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Approve"</li></ol>  |
+| **Draft report** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li><li>A laboratory user submits a Draft Report</li></ol> | <ol><li>Open</li><li>In Progress</li><li>In Progress</li></ol> | <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Approve"</li><li>Req action = "Approve"</li></ol> |
+| **Draft report - rejected** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li><li>A laboratory user submits a Draft Report</li><li>A signout user reviews the draft and selects Accept report: 'No'</li></ol> | <ol><li>Open</li><li>In Progress</li><li>In Progress</li><li>In Progress/li></ol> | <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Approve"</li><li>Req action = "Approve"</li><li>Req action = "Approve"</li></ol> |
+| **Draft report - resubmitted** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li><li>A laboratory user submits a Draft Report</li><li>A signout user reviews the draft and selects Accept report: 'No'</li><li>A laboratory user submits a new version of the draft report</li></ol> | <ol><li>Open</li><li>In Progress</li><li>In Progress</li><li>In Progress</li><li>In Progress</li></ol> | <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Approve"</li><li>Req action = "Approve"</li><li>Req action = "Approve"</li><li>Req action = "Approve"</li></ol> |
+| **Final Report** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li><li>A laboratory user submits a Draft Report</li><li>A signout user reviews the draft and selects Accept report: 'Yes'. The user then uploads the final report and selects Sign Out : Yes</li></ol> | <ol><li>Open</li><li>In Progress</li><li>In Progress</li><li>Completed</li></ol> | <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Approve"</li><li>Req action = "Approve"</li><li>sign out = yes on last-instance</li></ol> |
+| **Edit** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li><li>A requisitioner discovers inaccurate information and selects 'Edit' in Requisition Status</li></ol> | <ol><li>Open</li><li>In Progress</li><li>Open for Editing</li></ol> | <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Approve"</li><li>Req action = "Edit"</li></ol> |
+| **Edited** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li><li>A requisitioner discovers inaccurate information and selects 'Edit' in Requisition Status</li><li>A requisitioner edits Patient Information or Specimen Information</li></ol> | <ol><li>Open</li><li>In Progress</li><li>Open for Editing</li><li>Open</li></ol> | <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Approve"</li><li>Req action = "Edit"</li><li>Patient Info or Specimen Info modified after req status</li></ol> |
+| **Accessioner-Rejected** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Reject'</li></ol> | <ol><li>Open</li><li>Rejected</li></ol> | <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Reject"</li></ol> |
+| **Accessioner - Rejected - edited** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Reject'</li><li>A requisitioner edits Patient Information or Specimen Information</li></ol> | <ol><li>Open</li><li>Rejected</li><li>Open</li></ol> | <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Reject"</li><li>Patient Info or Specimen Info modified after req status</li></ol> |
+| **Consent withdrawn - in progress** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li><li>A requisitioner selects Consent: 'No' on the requisition status page</li></ol> | <ol><li>Open</li><li>In Progress</li><li>Consent withdrawn</li></ol> | <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Approve"</li><li>Consent = No</li></ol> |
+| **Consent withdrawn - in progress - stopped** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li><li>A requisitioner selects Consent: 'No' on the requisition status page</li><li>An accessioner or laboratory user reviews the consent status and selects 'Stop' on the Requisition Status page</li></ol> | <ol><li>Open</li><li>In Progress</li><li>Consent withdrawn</li><li>Stopped - Consent Withdrawn</li></ol>| <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Approve"</li><li>Consent = No</li><li>Req action = "Stop" and Consent = No</li></ol> |
+| **Consent withdrawn - after signout** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li><li>A laboratory user submits a Draft Report</li><li>A signout user reviews the draft and selects Accept report: 'Yes'. The user then uploads the final report and selects Sign Out : Yes</li><li>A requisitioner selects Consent: 'No' on the requisition status page</li></ol> | <ol><li>Open</li><li>In Progress</li><li>In Progress</li><li>Completed</li><li>Consent withdrawn</li></ol> | <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Approve"</li><li>Req action = "Approve"</li><li>sign out = yes on last-instance</li><li>Consent = no</li></ol> |
+| **Consent withdrawn - after signout - stopped** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li><li>A laboratory user submits a Draft Report</li><li>A signout user reviews the draft and selects Accept report: 'Yes'. The user then uploads the final report and selects Sign Out : Yes</li><li>A requisitioner selects Consent: 'No' on the requisition status page</li><li>An accessioner or laboratory user reviews the consent status and selects 'Stop' on the Requisition Status page</li></ol> | <ol><li>Open</li><li>In Progress</li><li>In Progress</li><li>Completed</li><li>Consent withdrawn</li><li>Stopped - Consent Withdrawn</li></ol> | <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Approve"</li><li>Req action = "Approve"</li><li>sign out = yes on last-instance</li><li>Consent = no</li><li>Req action = "Stop" and Consent = No</li></ol> |
+| **Withdraw - in progress** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li><li>A requisitioner selects "Withdraw" from the Requisition Status Page</li></ol> | <ol><li>Open</li><li>In Progress</li><li>Withdrawn</li></ol> | <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Approve"</li><li>Req action = "Withdraw"</li></ol> |
+| **Withdraw - in progress - stopped** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li><li>A requisitioner selects "Withdraw" from the Requisition Status Page</li><li>An accessioner or laboratory user selects 'Stop' on the Requisition Status page</li></ol> | <ol><li>Open</li><li>In Progress</li><li>Withdrawn</li><li>Stopped</li></ol> | <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Approve"</li><li>Req action = "Withdraw"</li><li>Req action = "Stop"</li></ol> |
+| **Rescinded** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li><li>A laboratory user submits a Draft Report</li><li>A signout user reviews the draft and selects Accept report: 'Yes'. The user then uploads the final report and selects Sign Out : Yes</li><li>A requisitioner selects "Rescind" on the requisition status page</li></ol> | <ol><li>Open</li><li>In Progress</li><li>In Progress</li><li>Completed</li><li>Rescinded</li></ol> | <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Approve"</li><li>Req action = "Approve"</li><li>sign out = yes on last-instance</li><li>Req action = "rescind"</li></ol> |
+| **Rescinded - edited** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li><li>A laboratory user submits a Draft Report</li><li>A signout user reviews the draft and selects Accept report: 'Yes'. The user then uploads the final report and selects Sign Out : Yes</li><li>A requisitioner selects "Rescind" on the requisition status page</li><li>The requisitioner edits Patient Information or Specimen Information</li></ol> | <ol><li>Open</li><li>In Progress</li><li>In Progress</li><li>Completed</li><li>Rescinded</li><li>Open</li></ol> | <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Approve"</li><li>Req action = "Approve"</li><li>sign out = yes on last-instance</li><li>Req action = "rescind"</li><li>Patient Info or Specimen Info modified after req status</li></ol> |
+| **Rescinded - edited - approved** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li><li>A laboratory user submits a Draft Report</li><li>A signout user reviews the draft and selects Accept report: 'Yes'. The user then uploads the final report and selects Sign Out : Yes</li><li>A requisitioner selects "Rescind" on the requisition status page</li><li>The requisitioner edits Patient Information or Specimen Information</li><li>An accessioner reviews the information and selects 'Approve'</li></ol> | <ol><li>Open</li><li>In Progress</li><li>In Progress</li><li>Completed</li><li>Rescinded</li><li>Open</li><li>In Progress - Amendment</li></ol> | <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Approve"</li><li>Req action = "Approve"</li><li>sign out = yes on last-instance</li><li>Req action = "rescind"</li><li>Patient Info or Specimen Info modified after req status</li><li>Req action = "Approve" and sign out = yes</li></ol> |
+| **Amended report - draft** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li><li>A laboratory user submits a Draft Report</li><li>A signout user reviews the draft and selects Accept report: 'Yes'. The user then uploads the final report and selects Sign Out : Yes</li><li>A requisitioner selects "Rescind" on the requisition status page</li><li>The requisitioner edits Patient Information or Specimen Information</li><li>An accessioner reviews the information and selects 'Approve'</li><li>A laboratory user submits a new Draft Report</li></ol> | <ol><li>Open</li><li>In Progress</li><li>In Progress</li><li>Completed</li><li>Rescinded</li><li>Open</li><li>In Progress - Amendment</li><li>In Progress - Amendment</li></ol> | <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Approve"</li><li>Req action = "Approve"</li><li>sign out = yes</li><li>Req action = "rescind"</li><li>Patient Info or Specimen Info modified after req status</li><li>Req action = "Approve - Amendment" and sign out = yes on last-instance</li><li>Req action = "Approve - Amendment" and sign out = no on last-instance and last-instance > 1</li></ol> |
+| **Amended report - signed out** | <ol><li>A requisitioner completes Requisition Status, Patient Information, and Specimen Information</li><li>An accessioner reviews the information on Requisition Status and selects 'Approve'</li><li>A laboratory user submits a Draft Report</li><li>A signout user reviews the draft and selects Accept report: 'Yes'. The user then uploads the final report and selects Sign Out : Yes</li><li>A requisitioner selects "Rescind" on the requisition status page</li><li>The requisitioner edits Patient Information or Specimen Information</li><li>An accessioner reviews the information and selects 'Approve'</li><li>A laboratory user submits a new amended Draft Report</li><li>A signout user reviews the amended Draft and selects Accept report: 'Yes'. The user then uploads the final report and selects Sign Out : Yes</li></ol> | <ol><li>Open</li><li>In Progress</li><li>In Progress</li><li>Completed</li><li>Rescinded</li><li>Open</li><li>In Progress - Amendment</li><li>In Progress - Amendment</li><li>Completed</li></ol> | <ol><li>Patient Info, Specimen info complete</li><li>Req action = "Approve"</li><li>Req action = "Approve"</li><li>sign out = yes on last-instance</li><li>Req action = "rescind"</li><li>Patient Info or Specimen Info modified after req status</li><li>Req action = "Approve - Amendment" and sign out = yes on last-instance</li><li>Req action = "Approve - Amendment" and sign out = no on last-instance and last-instance > 1</li><li>sign out = yes on last-instance</li></ol> |
 
-## Instruments
 
-### Instrument List
+## (3) Instruments
+
+### (3a) Instrument List
 1. Record
 2. Status
 3. Assay
@@ -56,8 +57,14 @@
 7. Manifest
 8. Requisition Calculated Fields (Invisible Instrument for Form Administrator Purposes)
 
-### Instrument Interaction Structure
+### (3b) Instrument Interaction Structure
 
-## Data Access Groups (DAGs)
+### (3c) Action Tags and Field Annotations
 
-## 
+## (4) Data Access Groups (DAGs)
+
+## (5) Data Collection Flow (Intended)
+
+## (6) Glossary
+
+## (7) Project Setup
