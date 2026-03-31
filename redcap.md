@@ -71,6 +71,7 @@ Data Access Groups are used to sort relevant groups within a project.  These gro
 
 ## (6) Glossary
 | **Term** | **Definition** | 
+| ----------- | ----------- |
 | **Arm:** | Ordered group of events; allow longitudinal projects to have a series of events defined|
 | **Accessioner Dash Report:** *| Dash Report: 	Tracks statuses of requisitions for Accessioner View. |
 | **Project (Classic):** | Also known as a traditional project, this the simplest type of REDCap project. You can define one or multiple instruments (also called forms) for data entry. Both repeating and non-repeating instruments are allowed. Non-repeating instruments are completed only once for each record. For nonrepeating instruments, one row of data in the data tibble represents one record. Repeating instruments can be completed an arbitrary number of times for each record. For repeating instruments, one row of data in the data tibble represents one repeat instance of one record.|
