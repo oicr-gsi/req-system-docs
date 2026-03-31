@@ -58,13 +58,32 @@
 8. Requisition Calculated Fields (Invisible Instrument for Form Administrator Purposes)
 
 ### (3b) Instrument Interaction Structure
+Instruments interact in an "event" called Requisition.  The Requisition Event is initiated when a Record is created.  The event is completed when all instruments associated with the event have been completed, or when the event has been deliberately stopped (i.e. when a submission has been stopped, consent has been withdrawn, or the requisition is removed from the system).  Assay, Requisition, and Manifest have been enabled as "surveys" which allows users to input data into these instruments to record information.  The remaining instruments are used to collect and sort information gathered by the surveys.  Neither a Draft Report or a Final Report can be submitted until assays and requisition requests have been approved by an accessioner.
 
 ### (3c) Action Tags and Field Annotations
+Action Tags and Field annotations are used to generate conditional logic and enforce states dictated by the Requisition Calculated Fields instrument.  See [more information on action tags and field annotations](https://www.ctsi.ufl.edu/wordpress/files/2019/02/Using-Action-Tags-in-REDCap.pdf)
 
 ## (4) Data Access Groups (DAGs)
+Data Access Groups are used to sort relevant groups within a project.  These groups might belong to a particular organization or external project, meaning that their access to information in REDCap should be limited to information associated with their organization.  For example the BTC organization will only see options associated with the BTC projects.  This logic will be dictated within instruments such as "Assay", as well as Requisition Calculated Fields, to dictate where information populates.  See [more information on DAGs](https://kb.wisc.edu/smph/informatics/108531).
 
 ## (5) Data Collection Flow (Intended)
+[Figma Diagram of Intended Interactions in REDCap](https://www.figma.com/board/5xlFgTiVT1HIgrtndM26Xw/REDCap-User-Flows?node-id=0-1&t=l6sAP9wT0PkRFUue-1)
 
 ## (6) Glossary
+| **Term** | **Definition** | 
+| **Arm:** | Ordered group of events; allow longitudinal projects to have a series of events defined|
+| **Accessioner Dash Report:** *| Dash Report: 	Tracks statuses of requisitions for Accessioner View. |
+| **Project (Classic):** | Also known as a traditional project, this the simplest type of REDCap project. You can define one or multiple instruments (also called forms) for data entry. Both repeating and non-repeating instruments are allowed. Non-repeating instruments are completed only once for each record. For nonrepeating instruments, one row of data in the data tibble represents one record. Repeating instruments can be completed an arbitrary number of times for each record. For repeating instruments, one row of data in the data tibble represents one repeat instance of one record.|
+| **Project (Longitudinal):** | A type of REDCap project that contains events and optionally arms. One instrument can be associated with multiple events. This makes it possible to collect the same kind of data for the same record multiple times, which is useful for longitudinal research studies with multiple study visits.  The requisition project is a longitudinal study |
+| **Code Book:** | Read-only snapshot of the Data Dictionary; easily allows relevant user types to view branching logic, variable naming conventions, and form field IDs.  This is relevant for tracking which fields interact with each other, how IDs (if any) are generated and recorded, and understanding and establishing naming conventions across projects.  Each REDCap project has its own code book. |
+| **Data Dictionary:** | A comprehensive, editable file that addresses all elements of the project (naming conventions, data collection, linked and piped data); the first variable on the form is always the record ID, followed by the order in which variables are created and labeled within the project |
+| **Data Access Groups: (DAGs):** | Variable used to limit users' access to specific sets of records and information - these groups can be created by administrators, and apply variables to instruments to ensure that specific DAGs are either logged or react to the instrument in a certain way |
+| **Instrument:** | Also called form. An electronic data entry form in REDCap. An instrument contains field into which data can be entered. In the supertibble, each row corresponds to one instrument. The instrument’s name and human-readable label are shown in the redcap_form_name and redcap_form_label columns of the supertibble, respectively. A data tibble contains all the data that was entered into a specific instrument |
+| **Metadata Tibble:** | A tibble that contains metadata about a specific REDCap instrument/ form.  The redcap_metadata column of the supertibble contains the metadata tibbles of a project. The rows of the metadata tibble represent field of the instrument. The columns represent attributes of those fields. For example, the field_name, field_label, and field_type columns show the field’s name, a human-readable description (the field label), and its field type.|
+| **Legend for Status Icons:** | The status icon legend is available from the Record Status Dashboard page.  Note that these statuses will not be used to track the status of a requisition.  Please see the relevant user dashboard. |
+| **Project:** | Also called a database; a REDCap project is a self-contained collection of all the of data and metadata related to some data collection activity (for example, a specific research study). A project may be classic or longitudinal. A classic project consists of instruments that contain fields. A longitudinal project may additionally include events and arms. You can use read_redcap() to import the data from a project. |
+| **Record Status Dashboard:** | Realtime updates on all form submissions and their statuses; OICR's REDCap instance will not be using the RSD to track statuses across  |
+| **Requisitioner Dash:** | Tracks statuses of requisitions in the requisitioners view.  |
+
 
 ## (7) Project Setup
